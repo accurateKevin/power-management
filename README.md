@@ -1,1 +1,1 @@
-# power-management
+# power-management project for IoT
