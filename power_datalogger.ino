@@ -1,4 +1,8 @@
-// Data logger for ARTIK IoT power management tutorial
+/* 
+ *  Data logger sketch for Samsung ARTIK power management tutorial
+ *  All code in public domain
+ *  Accompanying circuit design and discussion: https://www.artik.io/blog 
+ */
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -62,8 +66,8 @@ void loop() {
   // main code here runs repeatedly
 
   // begin logging when trigger is pulled low. Logging will end when pin goes high and you'll need to restart the program to start again.
-//  while (digitalRead(trigger) == LOW){ // this for on-shot
-  if (digitalRead(trigger) == LOW){ // this allows start, pause, restart under trigger control
+  while (digitalRead(trigger) == LOW){ // this for one-shot
+//  if (digitalRead(trigger) == LOW){ // this allows start, pause, restart under trigger control
     unsigned long thisMillis = millis(); // milliseconds since this program started 
     unsigned long lastMillis;
 
